@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block css %}
+<!-- なし -->
+{% endblock %}
+
+<div id="inquiry">
+{% block content %}
+  <h1>お問合せフォーム</h1>
+  <p>弊社へのお問合わせは下記のフォームに必要事項をご記入の上「送信する」ボタンを押してください。</p>
+  <h2>メール対応時間</h2>
+  <p>9:00~17:00</p>
+  <p>時間帯によっては対応が遅れてしまう可能性があります。ご了承ください。
+    電話対応も可能です。業務時間外のお電話につきましては対応いたしかねます。</p>
+  <p>tel:019-661-8356</p>
+  <h3>お客様情報</h3>
+  <form action="" method="post">
+    会社名<input type="text" name="companyname"><br>
+    <span class="Required">必須</span>名前<input type="text" name="name"><br>
+    <span class="Required">必須</span>ふりがな<input type="text" name="furigana"><br>
+    <span class="Required">必須</span>メールアドレス<input type="text" name="mail"><br>
+    <span class="Required">必須</span>電話番号<input type="text" name="tel"><br>
+    <span class="Required">必須</span>住所<span class="postmark">〒</span><input type="text" name="postcode"><br>
+                         <input type="text" name="address"><br>
+    <span class="Required">必須</span>お問い合わせ内容<input type="text" name="content"><br>
+  </form>
+{% endblock %}
+</div>
