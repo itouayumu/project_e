@@ -16,13 +16,19 @@
   <h3>お客様情報</h3>
   <form action="" method="post">
     会社名<input type="text" name="companyname"><br>
-    <span class="Required">必須</span>名前<input type="text" name="name"><br>
-    <span class="Required">必須</span>ふりがな<input type="text" name="furigana"><br>
-    <span class="Required">必須</span>メールアドレス<input type="text" name="mail"><br>
-    <span class="Required">必須</span>電話番号<input type="text" name="tel"><br>
-    <span class="Required">必須</span>住所<span class="postmark">〒</span><input type="text" name="postcode"><br>
+    <label class="Required">必須</label>名前<input type="text" name="name"><br>
+    <label class="Required">必須</label>ふりがな<input type="text" name="furigana"><br>
+    <label class="Required">必須</label>メールアドレス<input type="text" name="mail"><br>
+    <label class="Required">必須</label>電話番号<input type="text" name="tel"><br>
+    <label class="Required">必須</label>住所<span class="postmark">〒</span><input type="text" name="postcode"><br>
                          <input type="text" name="address"><br>
-    <span class="Required">必須</span>お問い合わせ内容<input type="text" name="content"><br>
+    <label class="Required">必須</label>お問い合わせ内容<input type="text" name="content"><br>
+    <input type="checkbox" id="confirm" onchange="enableSubmitButton()">
+    <label for="confirm">入力した内容に間違いはありませんか？</label><br>
+    <button type="submit" id="submit" disabled>入力内容を送信</button>
   </form>
+  <script src="{{url_for('static', filename='js/check.js')}}"></script>
+  <script src="//code.jquery.com/jquery-1.12.1.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 {% endblock %}
 </div>
