@@ -1,4 +1,15 @@
+@charset "utf-8";
+@font-face {
+    font-family: 'スマートフォントUI';
+    src: url("../fonts/03スマートフォントUI.otf") format("opentype");
+}
+body{
+    
+    font-family: 'スマートフォントUI';
+}
 .header {
+
+    border-radius: 50px 50px 50px 50px;
     position: fixed;
     top: 0;
     width: 100%;
@@ -10,6 +21,7 @@
     align-items: center;
   }
   .header-button {
+    border-radius: 50px;
     position: relative;
     z-index: 99;
     display: block;
@@ -61,6 +73,7 @@
   }
   
   .globalmenu {
+ 
     transform: translateX(100%);
     position: fixed;
     top: 0;
@@ -68,30 +81,78 @@
     width: 100%;
     height: 100vh;
     z-index: 9;
-    background: #957e80;
+    background: #4bd2e3;
     transition: all 1s;
     overflow: auto;
+  }
+  .header-button{
+    margin-left: 101.5%;
+  }
+  .title{
+   z-index: 1;
   }
   
   .globalmenu.js-active {
     transform: translateX(0);
   }
   @media screen and (min-width: 768px) {
-    .globalmenu.js-active {
+    /* .globalmenu.js-active {
       transform: translateX(33%);
-    }
+    } */
   }
   @media screen and (min-width: 1024px) {
-    .globalmenu.js-active {
+    /* .globalmenu.js-active {
       transform: translateX(66%);
-    }
+    } */
   }
   .globnalmenu-list {
-    padding:150px 20px;
+    padding:50px 20px;
   }
   .globnalmenu-list li {
     color:#fff;
   }
   .globnalmenu-list li + li {
     margin-top:30px;
+  }
+  .icon {
+    margin-left: 50px;
+    width: 400px;
+    height: auto;
+    display: flex;
+    }
+  .menu{
+    display: flex;
+  }
+  .iconmenu{
+    display: flex;
+  }
+  .menu1{
+    padding: 5px;
+    padding-left: 30px;
+    font-size: 2.5rem;
+    margin-top: 80px;
+    margin-left: 50px;
+  }
+  .menu2{
+    padding-top: 110px;
+    font-size: 2.5rem;
+    margin-left: 100px;
+  }
+  .back{
+    margin-left: 70px;
+    width: 650px;
+    background-color: #ffffff63;
+  }
+
+  .menu a{
+    color: #000000; /*--オーシャンブルー--*/
+    text-decoration: none;
+    background-color: #ffffffba;
+    margin: 5px;
+    border: solid 1px #454545;
+  }
+  .menu a:hover{
+    color: #000000; /*--オーシャンブルー--*/
+    background-color: #dcfffcba;
+    border: solid 1px #454545;
   }
