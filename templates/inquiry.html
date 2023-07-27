@@ -4,7 +4,7 @@
 <!-- なし -->
 {% endblock %}
 
-<div id="inquiry">
+<div class="inquiry">
 {% block content %}
   <h1>お問合せフォーム</h1>
   <p>弊社へのお問合わせは下記のフォームに必要事項をご記入の上「送信する」ボタンを押してください。</p>
@@ -15,14 +15,57 @@
   <p>tel:019-661-8356</p>
   <h3>お客様情報</h3>
   <form action="" method="post">
-    会社名<input type="text" name="companyname"><br>
-    <span class="Required">必須</span>名前<input type="text" name="name"><br>
-    <span class="Required">必須</span>ふりがな<input type="text" name="furigana"><br>
-    <span class="Required">必須</span>メールアドレス<input type="text" name="mail"><br>
-    <span class="Required">必須</span>電話番号<input type="text" name="tel"><br>
-    <span class="Required">必須</span>住所<span class="postmark">〒</span><input type="text" name="postcode"><br>
-                         <input type="text" name="address"><br>
-    <span class="Required">必須</span>お問い合わせ内容<input type="text" name="content"><br>
+    <table>
+      <tr>
+        <td></td>
+        <td><label for="name">会社名</label></td>
+        <td><input type="text" name="companyname" id="companyname"></td>
+      </tr>
+      <tr>
+        <td><span class="Required">必須</span></td>
+        <td><label for="name">名前</label></td>
+        <td><input type="text" name="name" id="name"></td>
+      </tr>
+      <tr>
+        <td><span class="Required">必須</span></td>
+        <td><label for="furigana">ふりがな</label></td>
+        <td><input type="text" name="furigana" id="furigana"></td>
+      </tr>
+      <tr>
+        <td><span class="Required">必須</span></td>
+        <td><label for="mail">メールアドレス</label></td>
+        <td><input type="text" name="mail" id="mail"></td>
+      </tr>
+      <tr>
+        <td><span class="Required">必須</span></td>
+        <td><label for="tel">電話番号</label></td>
+        <td><input type="text" name="tel" id="tel"></td>
+      </tr>
+      <tr>
+        <td><span class="Required">必須</span></td>
+        <td><label for="postcode">住所</label></td>
+        <td><span class="postmark">〒</span><input type="text" name="postcode" id="postcode" maxlength="8" onKeyUp="AjaxZip3.zip2addr(this,'','address','address');"></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td><input type="text" name="address"></td>
+      </tr>
+      <tr>
+        <td><span class="Required">必須</span></td>
+        <td><label for="content">お問い合わせ内容</label></td>
+        <td><textarea name="content" id="content" cols="30" rows="10"></textarea></td>
+      </tr>
+    </table>
+    <input type="checkbox" id="confirm" onchange="enableSubmitButton()">
+    <label for="confirm">入力した内容に間違いはありませんか？</label>
+    <p><button type="submit" id="submit" disabled>入力内容を送信</button></p>
+
+
   </form>
+  <script src="{{url_for('static', filename='js/check.js')}}"></script>
+  <script src="//code.jquery.com/jquery-1.12.1.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script>
 {% endblock %}
 </div>
