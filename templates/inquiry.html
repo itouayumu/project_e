@@ -14,7 +14,7 @@
     電話対応も可能です。業務時間外のお電話につきましては対応いたしかねます。</p>
   <p>tel:019-661-8356</p>
   <h3>お客様情報</h3>
-  <form action="" method="post">
+  <form action="{{url_for('inquiry_mail')}}" method="post">
     <table>
       <tr>
         <td></td>
@@ -44,7 +44,7 @@
       <tr>
         <td><span class="Required">必須</span></td>
         <td><label for="postcode">住所</label></td>
-        <td><span class="postmark">〒</span><input type="text" name="postcode" id="postcode" maxlength="8" onKeyUp="AjaxZip3.zip2addr(this,'','address','address');"></td>
+        <td><span class="postmark">〒</span><input type="text" name="postcode" id="postcode" maxlength="7" onKeyUp="AjaxZip3.zip2addr(this,'','address','address');"></td>
       </tr>
       <tr>
         <td></td>
