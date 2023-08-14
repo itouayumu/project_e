@@ -28,5 +28,9 @@ def inquiry_mail():
     mail.send_mail(companyname, name, furigana, id, tel, postcode, address, content)
     return redirect(url_for('index'))
 
+@app.route('/adoption')
+def adoption():
+    return render_template('adoption.html')
+
 if __name__ == '__main__':
     app.run(debug=True)
