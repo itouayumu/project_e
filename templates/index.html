@@ -1,9 +1,30 @@
-{% extends "layout.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='/css/style.css')}}">
+    <title>Document</title>
+</head>
+<body>
+<p class="title">会社概要</p>
+<h1 class="title_sub">company<h1>
+<h2>どんな会社？</h2>
+<p>姫神設備工業は皆様の生活に必要不可欠な水回りの工事をしている会社です</p>
+<h2>どんな仕事をしている？</h2>
+<p>配管の工事や配管の修理等そのほかにも給湯器の交換も行っています</p>
+<img src="" alt="施工実績">
+<img src="" alt="施工実績２">
+<img src="" alt="SDGS">
+<h2>仕事以外の取り組みは?</h2>
+<p>SDGSなどの環境貢献活動をしています
+</p>
 
-{% block css %}
-<!-- なし -->
-{% endblock %}
-
-{% block content %}
-
-{% endblock %}
+<div>
+    <a href="{{url_for('form')}}">求人フォームはこちら</a>
+</div>
+</body>
+</html>
+    
+    
+    
