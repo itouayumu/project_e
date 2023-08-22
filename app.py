@@ -48,6 +48,7 @@ def inquiry_mail():
     mail.send_mail(companyname, name, furigana, id, tel, postcode, address, content)
     return redirect(url_for('index'))
 
+
 @app.route('/post_news')
 def post_news():
     return render_template('post_news.html')
@@ -84,6 +85,11 @@ def post_news_result():
             return render_template('postnews_result.html')
       else:
             return render_template('post_news.html')
+
+@app.route('/adoption')
+def adoption():
+    return render_template('adoption.html')
+
 
 if __name__ == '__main__':
     app.run(debug=True)
