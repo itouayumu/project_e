@@ -9,6 +9,8 @@
   <!-- CSS埋め込み -->
   {% endblock %}
   <h1 class="title">姫神設備工業</h1>
+
+
 </head>
 <body>
   <header class="header">
@@ -50,6 +52,41 @@
   <!-- ここにメインコンテンツを埋め込む -->
   {% endblock %}
 
+<footer class="footer">
+  <div class="md-flex md-justify-between">
+
+      <img src="../static/img/icon3.png"  alt="Logo" class="futter_logo">
+    </a>
+    <div class="grid">
+      <div>
+        <p class="footer__navi-heading">SERVICE</p>
+        <ul class="footer__navi">
+          <li><a href="#">サービスA</a></li>
+          <li><a href="#">サービスB</a></li>
+          <li><a href="#">サービスC</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3067.6318204201193!2d141.14738057477416!3d39.74792049607568!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f85743c881f1095%3A0x5b688c05a5dee0a4!2z44CSMDIwLTAxMDIg5bKp5omL55yM55ub5bKh5biC5LiK55Sw5p2-5bGL5pW377yY77yX4oiS77ySIOWnq-elnuioreWCmeW3pealrQ!5e0!3m2!1sja!2sjp!4v1690512045533!5m2!1sja!2sjp" width="500" height="350" margin="100" ></iframe>
+        </div>
+        </ul>
+        <a href="https://twitter.com/home" id="sns1" class="sns1">ツイッター</a>
+        <nav id="sns1_1" class="sns1_1"></nav>
+        
+      </div>
+     
+
+    </div>
+  </div>
+  <hr />
+  <p class="copyright">© 2023 <a href="https://jajaaan.co.jp/">JAJAAAN Inc.</a> All Rights Reserved.
+  </p>
+</footer>
+
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/85188/jquery.ripples-min.js"></script>
   <script src="{{url_for('static', filename='js/kayout.js')}}"></script>
   <script src="//code.jquery.com/jquery-1.12.1.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>

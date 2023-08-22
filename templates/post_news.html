@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ニュース投稿フォーム</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
+<body>
+    <form class="news" action="{{url_for('post_news_result')}}"method="POST" enctype="multipart/form-data">
+        <div class="title">
+            <p>タイトル</p>
+            <input type="text" class="title"  name="title">
+          </div>
+          <div class="content">
+              <p>内容</p>
+              <textarea name="content" 
+              placeholder="内容を入力してください。" ></textarea>
+            </div>
+            <div id="app">
+                <div class="preview_zone">
+                  <img :src="url" alt="ここにプレビューが表示されます" width="200"height="auto">
+                </div>
+                <div class="upload_zone">
+                  <input type="file" class="input_file" ref="preview" @change="previewImage"name="img">  
+                </div>
+              </div>
+               
+                
+               <script>
+                 const app = new Vue({
+                     el: '#app',
+                     data: {
+                         url: '',
+                     },
+                     methods: {
+                         previewImage() {
+                             let image = this.$refs.preview.files[0];
+                             this.url = URL.createObjectURL(image);
+                         }
+                     }
+                 })
+               </script>
+            </div>
+            <button type="submit" class="a1">投稿</button>
+    </form>
+</body>
+</html>
