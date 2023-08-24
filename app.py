@@ -28,7 +28,25 @@ def get_connection():
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    sql = "SELECT * FROM himekami_news ORDER BY contentday DESC LIMIT 5"
+  
+    
+    # try :
+    connection = get_connection()
+    cursor = connection.cursor()
+    
+    cursor.execute(sql)
+    news = cursor.fetchall()
+
+
+    # except psycopg2.DatabaseError :
+    #     flg = False
+
+    # finally :
+    cursor.close()
+    connection.close()
+
+    return render_template('index.html',news=news)
 
 @app.route('/inquiry')
 def inquiry():
