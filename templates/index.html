@@ -15,6 +15,7 @@
     <div class="top_news">
     {% for News in news %}
     <div class="top_news_space">
+        <p class="news_image"><img src="{{url_for('static', filename='/img/'+News[3])}}" alt=""></p>
         <p class="news_title">{{News[1]}}</p>
         <p class="top_content">{{News[2]}}</p>
     </div>
