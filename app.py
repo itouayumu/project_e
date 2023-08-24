@@ -109,5 +109,10 @@ def adoption():
     return render_template('adoption.html')
 
 
+@app.route('/profile')
+def profile():
+    return render_template('companyprofile.html')
+
+
 if __name__ == '__main__':
     app.run(debug=True)

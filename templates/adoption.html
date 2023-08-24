@@ -1,14 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{url_for('static', filename='/css/style.css')}}">
-    <title>Document</title>
-</head>
-<body>
-    <h3>会社からの言葉</h3>
-    <p>message</p>
+{% extends "layout.html" %}
+
+{% block css %}
+<link rel="stylesheet" href="{{url_for('static', filename='/css/style.css')}}">
+{% endblock %}
+
+{% block content %}
+    <div class="adoption_nomal">会社からの言葉</div>
+    <div class="adoption_big">message</div>
     <div style="text-align: center;">
         <div class="adoption_head">
             新たな従業員を募集中
@@ -49,33 +47,36 @@
         るため、安全への取り組みは水道工事において最も重要
         な要素となります。
     </div><br><br>
+    <div class="container">
+        <div class="adoption_info">
+            <div class="adoption_title">新卒採用情報</div>
+                <div class="ch">採用職種: 技術職（水道工事スタッフ）、事務職（新卒事務スタッフ）</div>
+                <div class="ch">応募資格: 技術職（土木系学科の大学卒業者）、事務職（高専・短大・大学卒業者）、Word・Excelの基本操作スキル</div>
+                <div class="ch">募集人数: 技術職 5名、事務職 2名</div>
+                <div class="ch">採用地域: 岩手県内の各エリア（盛岡市、一関市、釜石市など）</div>
+                <div class="ch">採用スケジュール: エントリー受付：6月1日～6月30日、面接日程：7月上旬～7月中旬、内定発表：7月末</div>
+                <div class="ch">選考プロセス: 書類選考、一次面接、二次面接（技術職は実技試験含む）、内定</div>
+                <div class="ch">福利厚生・待遇: 初任給：技術職 250,000円、事務職 200,000円、賞与年2回、交通費支給、社会保険完備、昇給・昇格制度あり</div>
+                <div class="ch">企業情報: 株式会社水道工事岩手、水道設備の施工・保守・修理を主な業務としており、地域に貢献する仕事に取り組んでいます。</div>
+                <div class="ch">応募方法: 履歴書・職務経歴書をPDF形式でメールに添付し、recruit@mizudo.co.jpまで送付してください。詳細については弊社ウェブサイトをご確認ください。<div><br><br>
+            </div>
+        </div>
+    </div>    
 
-    <div class="adoption_title">新卒採用情報</div>
-        <div>採用職種: 技術職（水道工事スタッフ）、事務職（新卒事務スタッフ）</div>
-        <div>応募資格: 技術職（土木系学科の大学卒業者）、事務職（高専・短大・大学卒業者）、Word・Excelの基本操作スキル</div>
-        <div>募集人数: 技術職 5名、事務職 2名</div>
-        <div>採用地域: 岩手県内の各エリア（盛岡市、一関市、釜石市など）</div>
-        <div>採用スケジュール: エントリー受付：6月1日～6月30日、面接日程：7月上旬～7月中旬、内定発表：7月末</div>
-        <div>選考プロセス: 書類選考、一次面接、二次面接（技術職は実技試験含む）、内定</div>
-        <div>福利厚生・待遇: 初任給：技術職 250,000円、事務職 200,000円、賞与年2回、交通費支給、社会保険完備、昇給・昇格制度あり</div>
-        <div>企業情報: 株式会社水道工事岩手、水道設備の施工・保守・修理を主な業務としており、地域に貢献する仕事に取り組んでいます。</div>
-        <div>応募方法: 履歴書・職務経歴書をPDF形式でメールに添付し、recruit@mizudo.co.jpまで送付してください。詳細については弊社ウェブサイトをご確認ください。<div><br><br>
 
-
-    <div class="adoption_title">中途採用情報</div>
-    <div>採用職種: 技術職（土木技術者、設備保守スタッフ）、営業職（法人営業担当）</div>
-        <div>応募資格: 技術職（土木系学科の大学卒業者、施工管理技士等の有資格者優遇）、営業職（営業経験者、普通自動車免許）</div>
-            <div>募集人数: 技術職 3名、営業職 2名</div>
-                <div>採用地域: 岩手県内の各エリア（盛岡市、一関市、釜石市など）、一部の隣接県も含む</div>
-                    <div>採用スケジュール: エントリー受付：随時、書類選考、面接日程：随時、選考結果により随時内定発表</div>
-                        <div>選考プロセス: 書類選考、一次面接、二次面接、適性試験（技術職のみ）、内定</div>
-                            <div>福利厚生・待遇: 月給：技術職 300,000円～、営業職 250,000円～、賞与年2回、交通費支給、社会保険完備、昇給・昇格制度あり</div>
-                                <div>企業情報: 株式会社水道工事岩手、地域密着型の水道設備会社であり、多くの地域の水道環境の改善に努めています。</div>
-                                    <div>応募方法: 履歴書・職務経歴書をPDF形式でメールに添付し、recruit@mizudo.co.jpまで送付してください。詳細については弊社ウェブサイトをご確認ください。</div><br>
-
-        情熱を当社で活かし、共に未来を創りましょう。</div>
-    <div>
-    <a href="{{url_for('form')}}">求人フォームはこちら</a>
-    </div>
-</body>
-</html>
+    <div class="container">    
+        <div class="adoption_info">
+            <div class="adoption_title">中途採用情報</div>
+                <div class="ch">採用職種: 技術職（土木技術者、設備保守スタッフ）、営業職（法人営業担当）</div>
+                    <div class="ch">応募資格: 技術職（土木系学科の大学卒業者、施工管理技士等の有資格者優遇）、営業職（営業経験者、普通自動車免許）</div>
+                        <div class="ch">募集人数: 技術職 3名、営業職 2名</div>
+                            <div class="ch">採用地域: 岩手県内の各エリア（盛岡市、一関市、釜石市など）、一部の隣接県も含む</div>
+                                <div class="ch">採用スケジュール: エントリー受付：随時、書類選考、面接日程：随時、選考結果により随時内定発表</div>
+                                    <div class="ch">選考プロセス: 書類選考、一次面接、二次面接、適性試験（技術職のみ）、内定</div>
+                                        <div class="ch">福利厚生・待遇: 月給：技術職 300,000円～、営業職 250,000円～、賞与年2回、交通費支給、社会保険完備、昇給・昇格制度あり</div>
+                                            <div class="ch">企業情報: 株式会社水道工事岩手、地域密着型の水道設備会社であり、多くの地域の水道環境の改善に努めています。</div>
+                                                <div class="ch">応募方法: 履歴書・職務経歴書をPDF形式でメールに添付し、recruit@mizudo.co.jpまで送付してください。詳細については弊社ウェブサイトをご確認ください。</div><br>
+        </div>
+    </div>    
+{% endblock %}
+    
