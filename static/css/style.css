@@ -66,7 +66,7 @@
    border: 3px solid#333333;;
 }
 .adoption_nomal{
-   font-size: 35px;
+   font-size: 20px;
 }
 .adoption_big{
    font-size: 55px;
@@ -75,13 +75,14 @@
    display: flex;
 }
 .adoption_info {
-   width: 50%; 
+   width: 100%; 
    padding: 20px;
    border: 1px solid #333;
    box-sizing: border-box;
 }
 .adoption_title{
-   font-size: 35px;
+   font-size: 25px;
 }
-
-
+.ch{
+   font-size: 15px;
+}
