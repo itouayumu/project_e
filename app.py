@@ -75,7 +75,7 @@ def post_news():
 @app.route('/post_news_result',methods = ["POST"])
 def post_news_result():
 
-      UPLOAD_FOLDER = 'C:/Users/itou/Documents/GitHub/project_e/static/img'
+      UPLOAD_FOLDER = 'C:/Users/togasawa/Documents/GitHub/project_e/static/img'
       file = request.files['img']
       charset = string.ascii_letters + string.digits
       ran = ''.join(random.choices(charset, k=5))
