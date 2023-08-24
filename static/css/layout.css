@@ -3,9 +3,11 @@
     font-family: 'スマートフォントUI';
     src: url("../fonts/03スマートフォントUI.otf") format("opentype");
 }
+
 body{
     
     font-family: 'スマートフォントUI';
+    background-image: url("../img/back.png") ;
 }
 h1 .title{
   font-size: 2rem;
@@ -165,3 +167,95 @@ h1 .title{
     background-color: #dcfffcba;
     border: solid 1px #454545;
   }
+   #svg {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+    }
+
+    #background {
+      filter: url("#disFilter");
+    }
+
+    #main {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border: 15px solid #fff;
+      box-sizing: border-box;
+      padding: 4%;
+      text-shadow: 1px 1px 5px #fff;
+      overflow: hidden;
+    }
+
+    html {
+      font-family: sans-serif;
+    }
+    
+
+    
+    ul {
+      padding: 0;
+      list-style: none;
+    }
+    
+    a {
+      color: #4b5564;
+      text-decoration: none;
+    }
+    
+    a:hover {
+      color: #000;
+    }
+    
+    hr {
+      height: 1px;
+      border: 0;
+      border-top: 1px solid #e5e7eb;
+    }
+    
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .footer {
+      padding: 2rem;
+      font-size: 15px;
+      color: #4b5564;
+      background: #e8fffa;
+    }
+    
+    .footer__navi-heading {
+      font-size: 35px;
+    }
+    
+    .footer__logo {
+      display: inline-block;
+      margin-bottom: 2rem;
+      width: 40px;
+      height: auto;
+    }
+    map{
+      margin-left: 300px;
+    }
+    .footer__navi li {
+      margin-bottom: 0.75rem;
+    }
+    .futter_logo{
+      height: 50px;
+      width: auto;
+    }
+    @media (min-width: 768px) {
+      .md-flex {
+        display: flex;
+      }
+    
+      
+    
+      .grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
