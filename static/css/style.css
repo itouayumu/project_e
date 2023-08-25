@@ -29,6 +29,34 @@
 	overflow: hidden;
 } 
 
+.achievement{
+   background-color: #ffffff;
+   width: 80%;
+   margin: 50px auto;
+   padding: 20px;
+}
+
+.slide-container {
+   width: 80%;
+   margin: 50px auto;
+   display: flex;
+   align-items: center;
+   overflow: hidden;
+}
+.slide-wrapper {
+ display: flex;
+ animation: slide-flow 20s infinite linear 1s both;
+}
+.slide{
+ width: 300px;
+ object-fit:cover;
+ border: 1px solid #ddd;
+}
+@keyframes slide-flow {
+    0% {transform: translateX(0);}
+100% {transform: translateX(-100%);}
+}
+
 /*=================================================================
    　　　　　　　　　　　　　会社概要
 =================================================================*/
