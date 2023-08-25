@@ -224,8 +224,8 @@ h1 .title{
     .footer {
       padding: 2rem;
       font-size: 15px;
-      color: #4b5564;
-      background: #e8fffa;
+      color: #fff;
+      background: #026189;
     }
     
     .footer__navi-heading {
@@ -252,7 +252,12 @@ h1 .title{
       .md-flex {
         display: flex;
       }
-    
+    .a{
+      color: #fff;
+    }
+    .sns_a{
+      margin-left: 100px;
+    }
       
     
       .grid {
