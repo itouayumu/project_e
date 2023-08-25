@@ -2,7 +2,32 @@
 /*=================================================================
    　　　　　　　　　　　　　TOP画面
 =================================================================*/
+.top_news{
+   display: flex;
+   margin-top:35px ;
+   margin-bottom: 35px;
+}
+.top_news_space{
+   margin-left: 100px;
+   margin: 0 auto;
 
+}
+.top_content{
+   white-space: pre-wrap;
+}
+.news_title{
+   
+      width: 250px; /* 省略せずに表示するサイズを指定 */
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+  }
+  .top_content{
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 3;
+	overflow: hidden;
+} 
 
 /*=================================================================
    　　　　　　　　　　　　　会社概要
